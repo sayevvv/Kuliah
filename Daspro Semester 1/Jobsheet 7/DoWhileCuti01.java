@@ -30,6 +30,10 @@ public class DoWhileCuti01 {
                     }
 
                 }
+            } 
+            else {
+                System.out.println("Baiklah");
+                System.exit(0);   
             }
 
         } while (jatahCuti > 0);
