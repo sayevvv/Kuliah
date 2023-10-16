@@ -8,7 +8,7 @@ public class kasirTokoBarokah {
                 // Deklarasi variabel
                 double totalHarga = 0.0, hargaBarang = 0;
                 boolean lanjutBelanja = true, barangValid = true;
-                int roti = 20000, beras = 50000, telur = 15000, minyak = 25000, gula = 12000, snack = 8000, rokok = 25000;
+                int roti = 20000, beras = 50000, telur = 15000, minyak = 25000, gula = 12000, snack = 8000, rokok = 25000, mie = 4000;
                 String namaBarang;
 
                 System.out.println("Toko Barokah");
@@ -20,7 +20,7 @@ public class kasirTokoBarokah {
                 System.out.println("Minyak \t\t: 25000");
                 System.out.println("Gula \t\t: 12000");
                 System.out.println("Snack \t\t: 8000");
-                System.out.println("Mie Instan\t: 4000");
+                System.out.println("Mie \t\t: 4000");
                 System.out.println("Rokok \t\t: 25000");
                 System.out.println("==========================");
 
@@ -54,12 +54,15 @@ public class kasirTokoBarokah {
                         case "rokok" :
                         hargaBarang = rokok;
                         break;
+                        case "mie" :
+                        hargaBarang = mie;
+                        break;
                         default :
                         System.out.println("Barang tidak tersedia atau anda salah input");
                         barangValid = false;
                         break;
                          } 
-                    } while(barangValid == false);
+                    } while(barangValid = false);
                     
                     
                     System.out.print("Masukkan jumlah barang \t: ");
