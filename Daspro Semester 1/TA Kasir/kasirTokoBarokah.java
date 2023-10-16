@@ -75,7 +75,7 @@ public class kasirTokoBarokah {
                     lanjutBelanja = lanjut.equalsIgnoreCase("ya");
                 }
                 
-                System.out.println("Total Harga: $" + totalHarga);
+                System.out.println("Total Harga: IDR " + totalHarga);
                 
                 System.out.print("Masukkan uang pembeli\t: IDR ");
                 double uangPembeli = input.nextDouble(); // INPUT UANG PEMBELI
