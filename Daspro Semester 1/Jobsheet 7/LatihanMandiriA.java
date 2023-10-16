@@ -16,7 +16,8 @@ public class LatihanMandiriA {
             if (jenis.equalsIgnoreCase("perempuan")) {
                 System.out.println(nama);
                 femaleCount++;
-            } else {
+            } else 
+            {
                 continue;
             }
             if (femaleCount == 0) {

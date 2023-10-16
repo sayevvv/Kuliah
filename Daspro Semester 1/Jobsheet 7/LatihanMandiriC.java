@@ -7,7 +7,7 @@ public class LatihanMandiriC {
             } else {
                 System.out.println(i);
             }
-        }
+            }
         }
     }
 
