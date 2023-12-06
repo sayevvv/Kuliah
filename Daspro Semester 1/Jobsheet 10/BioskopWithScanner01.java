@@ -30,7 +30,7 @@ public class BioskopWithScanner01 {
                 System.out.print("Baris ke-" + (i + 1) + " : " );
                 for (int j = 0; j < penonton[i].length; j++) {
                     if (penonton[i][j] == null) {
-                        System.out.print("***");
+                        System.out.print("avail");
                     } else {
                         System.out.print(penonton[i][j]);
                     }
