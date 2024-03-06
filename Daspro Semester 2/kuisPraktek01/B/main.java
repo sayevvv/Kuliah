@@ -24,7 +24,13 @@ public class main {
         for(int x = 0; x < mArray.length; x++){
             mArray[x].printData();
         }
-        sc.close();
-    }
-    
+
+        double terbesar = mArray[0].hitungBiayaTotal();
+        for(int y = 0; y < mArray.length; y++){
+            if(mArray[y].hitungBiayaTotal() > terbesar) {
+                terbesar = mArray[y].hitungBiayaTotal();
+                System.out.println("mobil dengan biaya terbesar adalah " + mArray[y].nama + "dengan harga total : " + terbesar);
+            }
+        }
+    }     
 }

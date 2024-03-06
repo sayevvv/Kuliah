@@ -29,6 +29,7 @@ public class mobil {
     public double hitungBiayaTotal(){
         return hitungPajak() + hitungBiayaPerawatan();
     }
+
     public void printData(){
         System.out.println("");
         System.out.println("========================");
