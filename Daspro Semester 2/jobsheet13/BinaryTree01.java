@@ -14,14 +14,14 @@ public class BinaryTree01 {
         } else {
             Node01 current = root;
             while(true){
-                if(data>current.data){
-                    if(current.left==null){
+                if(data<current.data){
+                    if(current.left!=null){
                         current = current.left;
                     } else {
                         current.left = new Node01(data);
                         break;
                     }
-                }else if(data<current.data){
+                }else if(data>current.data){
                     if(current.right!=null){
                         current = current.right;
                     }else{
@@ -34,6 +34,7 @@ public class BinaryTree01 {
             }
         }
     }
+     
     boolean find(int data){
         boolean result = false;
         Node01 current = root;
@@ -51,7 +52,7 @@ public class BinaryTree01 {
     }
     void traversePreOrder(Node01 node) {
         if(node != null){
-            System.out.println(" " + node.data);
+            System.out.print(" " + node.data);
             traversePreOrder(node.left);
             traversePreOrder(node.right);
         }
@@ -60,13 +61,13 @@ public class BinaryTree01 {
         if(node != null){
             traversePostOrder(node.left);
             traversePostOrder(node.right);
-            System.out.println(" " + node.data);
+            System.out.print(" " + node.data);
         }
     }
     void traverseInOrder(Node01 node){
         if (node != null){
             traverseInOrder(node.left);
-            System.out.println(" " + node.data);
+            System.out.print(" " + node.data);
             traverseInOrder(node.right);
         }
     }
@@ -154,6 +155,77 @@ public class BinaryTree01 {
             }
         }
     }
+
+    void addRecursive(int data) {
+        root = recursiveMethod(root, data);
+    }
+
+    private Node01 recursiveMethod(Node01 current, int data) {
+        if(current == null) {
+            return new Node01(data);
+        }
+        if(data < current.data) {
+            current.left = recursiveMethod( current.left, data);
+        } else if (data > current.data) {
+            current.right = recursiveMethod(current.right, data);
+        }
+        return current;
+    }
+
+int findMin() {
+    if(root == null) {
+        System.out.println("Tree is empty");
+        return -1;
+    } else {
+        Node01 current = root;
+        while(current.left != null) {
+            current = current.left;
+        }
+        return current.data;
+    }
+}
+
+int findMax() {
+    if(root == null) {
+        System.out.println("Tree is empty");
+        return -1;
+    } else {
+        Node01 current = root;
+        while(current.right != null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+}
+public void printLeafNodes(Node01 node) {
+    if (node != null) {
+        // Check if the node is a leaf node
+        if (node.left == null && node.right == null) {
+            System.out.print(" " + node.data);
+        }
+        // Recur on the left and right subtrees
+        printLeafNodes(node.left);
+        printLeafNodes(node.right);
+    }
+}
+
+public void printLeafNodes() {
+    printLeafNodes(root);
+}
+public int countLeafNodes(Node01 node) {
+    if (node == null) {
+        return 0;
+    }
+    if (node.left == null && node.right == null) {
+        return 1;
+    }
+    return countLeafNodes(node.left) + countLeafNodes(node.right);
+}
+
+public int countLeafNodes() {
+    return countLeafNodes(root);
+}
+
 }
 
 

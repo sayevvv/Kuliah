@@ -25,7 +25,7 @@ public class nilaiAkhir {
             System.out.println("nilai tidak valid");
             valid = false;
         } else {
-            nilaiAkhir = 0.2 * nilaiTugas + 0.2 * nilaiKuis + 0.3 * nilaiUTS + 0.4 * nilaiUAS;
+            nilaiAkhir = 0.2 * nilaiTugas + 0.2 * nilaiKuis + 0.3 * nilaiUTS + 0.3 * nilaiUAS;
             System.out.println("Nilai Akhir : " +nilaiAkhir);
         }
         

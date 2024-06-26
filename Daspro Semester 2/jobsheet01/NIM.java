@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class NIM {
     public static void main(String[] args) {
-        // Membaca NIM dari pengguna
+
         Scanner sc = new Scanner(System.in);
         System.out.print("Input NIM: ");
         String nim = sc.nextLine();
