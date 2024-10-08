@@ -13,7 +13,8 @@ public class Peminjaman {
     this.qty = qty;
     this.harga = harga;
     game = pilihan; 
-}
+    }
+    
     public void setPeminjaman(String tanggal1, String tanggal2) {
     
         // Ensure both dates have valid format (at least 6 characters, assuming "dd-MM-yyyy" format)
